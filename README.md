@@ -22,35 +22,22 @@ drivers names second.
 
 # Structure
 ProjectScienceExercise
-
+```
 ├── cmd
-
 │   └── main.go
-
 ├── internal
-
 |   ├── calculate/
-
 |   │   ├── calculate_test.go
-
 |   │   └── calculate.go
-
 |   ├── io/
-
 |   │   ├── fileio_test.go
-
 |   │   └── fileio.go
-
 |   └── matrices/
-
 |       ├── matrices_test.go
-
 |       └── matrices.go
-
 ├── testdata
-
 └── README.md
-
+```
 I created this simple structure becuase it helps me parse the different 
 components of the application. If the application were to get significantly
 larger, it may be benificial to move some of the packages to more traditionally
@@ -66,14 +53,18 @@ the results to a txt file (output.txt).
 Calculate has two main functions:
 
 **SuitabilityScore**:
+
 params *shipmentDestination string*, *driverName string*
+
 return *float64*
 
 Calculates the Suitabillity Score (using the top-secret algorithm) between
 the shipment address and the driver's name that are passed in and returns it.
 
 **FinalResults**
+
 params *shipmentLines []string*, *driverLines []string*, *matrixA [][]float64*, *answerKey []int*
+
 return *string*
 
 Calculates the Total Suitability Score via answerKey and matrixA. Uses the
@@ -84,8 +75,11 @@ string. It prints the final output string and returns it.
 We use io to parse txt files and create lists of strings from them
 
 **ParseFiles**
+
 params *shipmentFile string*, *driverFile string*
+
 return *[]string*, *[]string*
+
 
 Takes in two txt files (specifically the ones passed to our program when it's
 run). The files are read and each line is appended to a list made for that file.
@@ -95,8 +89,11 @@ The two lists are returned.
 Responsible for the creation of the various matrices we use in this project.
 
 **MakeMatrices**
+
 params *shipments []string*, *drivers []string*
+
 return *[][]float64*, *[][]int*
+
 
 Creates and returns two matrices:
   1. *suitabilityScoreMatrix*: A matrix that contains all of the suitability 
