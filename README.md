@@ -73,18 +73,18 @@ Calculate has two main functions:
 
 ### SuitabilityScore
 
-**params** shipmentDestination string, driverName string
+**params**: shipmentDestination string, driverName string
 
-**return** float64
+**return**: float64
 
 Calculates the Suitabillity Score (using the top-secret algorithm) between
 the shipment address and the driver's name that are passed in and returns it.
 
 ### FinalResults
 
-**params** shipmentLines []string, driverLines []string, matrixA [][]float64, answerKey []int
+**params**: shipmentLines []string, driverLines []string, matrixA [][]float64, answerKey []int
 
-**return** string
+**return**: string
 
 Calculates the Total Suitability Score via answerKey and matrixA. Uses the
 answerKey and the driver/shipment Lines slices to put together the final output
@@ -95,9 +95,9 @@ We use io to parse txt files and create lists of strings from them
 
 ### ParseFiles
 
-**params** shipmentFile string, driverFile string
+**params**: shipmentFile string, driverFile string
 
-**return** []string, []string
+**return**: []string, []string
 
 
 Takes in two txt files (specifically the ones passed to our program when it's
