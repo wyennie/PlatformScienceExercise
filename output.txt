@@ -1,0 +1,6 @@
+
+Shipment Address: 272 W. San Juan Dr.	 Driver Name: Jaxson Griffith
+Shipment Address: 19 E. Lakeview Drive	 Driver Name: Marlon Navarro
+Shipment Address: 7847 Acacia Ave.	 Driver Name: Ava Blevins
+
+Total Suitability Score: 27.25
