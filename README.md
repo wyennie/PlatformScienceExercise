@@ -71,20 +71,20 @@ the results to a txt file (output.txt).
 ## calculate
 Calculate has two main functions:
 
-**SuitabilityScore**:
+### SuitabilityScore
 
-*params* shipmentDestination string, driverName string
+**params** shipmentDestination string, driverName string
 
-*return* float64
+**return** float64
 
 Calculates the Suitabillity Score (using the top-secret algorithm) between
 the shipment address and the driver's name that are passed in and returns it.
 
-**FinalResults**
+### FinalResults
 
-*params* shipmentLines []string, driverLines []string, matrixA [][]float64, answerKey []int
+**params** shipmentLines []string, driverLines []string, matrixA [][]float64, answerKey []int
 
-*return* string
+**return** string
 
 Calculates the Total Suitability Score via answerKey and matrixA. Uses the
 answerKey and the driver/shipment Lines slices to put together the final output
@@ -93,11 +93,11 @@ string. It prints the final output string and returns it.
 ## io
 We use io to parse txt files and create lists of strings from them
 
-**ParseFiles**
+### ParseFiles
 
-*params* shipmentFile string, driverFile string
+**params** shipmentFile string, driverFile string
 
-*return* []string, []string
+**return** []string, []string
 
 
 Takes in two txt files (specifically the ones passed to our program when it's
@@ -107,11 +107,11 @@ The two lists are returned.
 ## matrices
 Responsible for the creation of the various matrices we use in this project.
 
-**MakeMatrices**
+### MakeMatrices
 
-*params* shipments []string, drivers []string
+**params**: shipments []string, drivers []string
 
-*return* [][]float64, [][]int
+**return**: [][]float64, [][]int
 
 Creates and returns two matrices:
   1. **suitabilityScoreMatrix**: A matrix that contains all of the suitability 
