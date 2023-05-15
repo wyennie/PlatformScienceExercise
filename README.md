@@ -18,11 +18,28 @@ Hungarian Algorithm
 ```
 
 # Run the Program!
-You can run the code in the cli like this:
+1. Clone the GitHub reopsitory.
+```
+$ git clone git@github.com:wyennie/PlatformScienceExercise.git
+```
+
+2. Download necessary modules.
+```
+$ go mod download
+```
+4. Run the code!
+
+**You can run it from the build file:**
 ```
 $ ./main testdata/shipments.txt testdata/drivers.txt
 ```
-This will run the program with the smaple txt files I've provided.
+
+**Otherwise**
+```
+$ go run cmd/main.go testdata/shipments.txt testdata/drivers.txt
+```
+
+This will run the program with the smaple txt files from `testdata`.
 
 When the code is run it will create a file called `output.txt` if it doesn't
 exist and overwrite that file if it does exist. You can see the output in that
@@ -33,6 +50,17 @@ The code should work with other txt files as well, the two text files should
 both have the same amount of lines (and preferrably no empty lines). 
 Make sure to pass in the list of shipment addresses first and the list of
 drivers names second.
+```
+$ ./main <shipments txt file> <drivers txt file>
+```
+```
+$ go run cmd/main.go <shipments txt file> <drivers txt file>
+```
+
+# Tests
+If you w
+I have made some simple tests for the `calculate`, `io`, and `matrices` files.
+Commands to run some tests from inside the project directory.
 
 # Assumptions
 - Shipment destination addresses are in the same city, and therefore it is a 
