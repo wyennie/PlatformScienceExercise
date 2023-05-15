@@ -1,3 +1,20 @@
+# Contents
+```
+├── Contents
+├── Run the Program!
+|   ├── use your own text files
+├── Assumptions
+├── Structure
+    ├── cmd/main.go
+    ├── calculate
+    │   ├── SuitabilityScore
+    │   └── FinalResults
+        └── MakeMatrices
+    ├── io
+    │   └── ParseFiles
+    └── matrices
+```
+
 # Run the Program!
 You can run the code in the cli like this:
 ```
@@ -93,7 +110,6 @@ Responsible for the creation of the various matrices we use in this project.
 params *shipments []string*, *drivers []string*
 
 return *[][]float64*, *[][]int*
-
 
 Creates and returns two matrices:
   1. *suitabilityScoreMatrix*: A matrix that contains all of the suitability 
