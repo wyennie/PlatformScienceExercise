@@ -22,19 +22,33 @@ drivers names second.
 
 # Structure
 ProjectScienceExercise
+
 ├── cmd
+
 │   └── main.go
+
 ├── internal
+
 |   ├── calculate/
+
 |   │   ├── calculate_test.go
+
 |   │   └── calculate.go
+
 |   ├── io/
+
 |   │   ├── fileio_test.go
+
 |   │   └── fileio.go
+
 |   └── matrices/
+
 |       ├── matrices_test.go
+
 |       └── matrices.go
+
 ├── testdata
+
 └── README.md
 
 I created this simple structure becuase it helps me parse the different 
