@@ -58,9 +58,23 @@ $ go run cmd/main.go <shipments txt file> <drivers txt file>
 ```
 
 # Tests
-If you w
 I have made some simple tests for the `calculate`, `io`, and `matrices` files.
 Commands to run some tests from inside the project directory.
+
+**caclulate**
+```
+$ go test ./internal/calculate
+```
+
+**io**
+```
+$ go test ./internal/io
+```
+
+**matrices**
+```
+$ go test ./internal/matrices
+```
 
 # Assumptions
 - Shipment destination addresses are in the same city, and therefore it is a 
