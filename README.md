@@ -61,7 +61,7 @@ $ go run cmd/main.go <shipments txt file> <drivers txt file>
 I have made some simple tests for the `calculate`, `io`, and `matrices` files.
 Commands to run some tests from inside the project directory.
 
-**caclulate**
+**calculate**
 ```
 $ go test ./internal/calculate
 ```
