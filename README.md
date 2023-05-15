@@ -14,6 +14,7 @@ Structure
     ParseFiles
   matrices
     MakeMatrices
+Hungarian Algorithm
 ```
 
 # Run the Program!
@@ -72,18 +73,18 @@ Calculate has two main functions:
 
 **SuitabilityScore**:
 
-params *shipmentDestination string*, *driverName string*
+*params* shipmentDestination string, driverName string
 
-return *float64*
+*return* float64
 
 Calculates the Suitabillity Score (using the top-secret algorithm) between
 the shipment address and the driver's name that are passed in and returns it.
 
 **FinalResults**
 
-params *shipmentLines []string*, *driverLines []string*, *matrixA [][]float64*, *answerKey []int*
+*params* shipmentLines []string, driverLines []string, matrixA [][]float64, answerKey []int
 
-return *string*
+*return* string
 
 Calculates the Total Suitability Score via answerKey and matrixA. Uses the
 answerKey and the driver/shipment Lines slices to put together the final output
@@ -94,9 +95,9 @@ We use io to parse txt files and create lists of strings from them
 
 **ParseFiles**
 
-params *shipmentFile string*, *driverFile string*
+*params* shipmentFile string, driverFile string
 
-return *[]string*, *[]string*
+*return* []string, []string
 
 
 Takes in two txt files (specifically the ones passed to our program when it's
@@ -108,18 +109,19 @@ Responsible for the creation of the various matrices we use in this project.
 
 **MakeMatrices**
 
-params *shipments []string*, *drivers []string*
+*params* shipments []string, drivers []string
 
-return *[][]float64*, *[][]int*
+*return* [][]float64, [][]int
 
 Creates and returns two matrices:
-  1. *suitabilityScoreMatrix*: A matrix that contains all of the suitability 
+  1. **suitabilityScoreMatrix**: A matrix that contains all of the suitability 
     scores between the shipment addressess and driver names
-  2. *hungarianMatrix*: A matrix that takes the *suitabilityScoreMatrix* and
+  2. **hungarianMatrix**: A matrix that takes the *suitabilityScoreMatrix* and
     creates a modified version of it that is suited for the hungarian algorithm.
-    *Brief hungarian algorithm*
-    The hungarian algorithm finds the smallest cost, but we want the largest,
-    The implementation of the hungarian algorithm I'm using also accepts a
-    matrix of int not float64. We multiply the score by 100 so we can convert
-    between int and float64 to the hundreth place. Then subtract each score from
-    a very large number. This will make the biggest the smallest 
+
+# Hungarian Algorithm
+The hungarian algorithm finds the smallest cost, but we want the largest,
+The implementation of the hungarian algorithm I'm using also accepts a
+matrix of int not float64. We multiply the score by 100 so we can convert
+between int and float64 to the hundreth place. Then subtract each score from
+a very large number. This will make the biggest the smallest 
