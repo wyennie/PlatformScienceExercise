@@ -1,18 +1,19 @@
 # Contents
 ```
-├── Contents
-├── Run the Program!
-|   ├── use your own text files
-├── Assumptions
-├── Structure
-    ├── cmd/main.go
-    ├── calculate
-    │   ├── SuitabilityScore
-    │   └── FinalResults
-        └── MakeMatrices
-    ├── io
-    │   └── ParseFiles
-    └── matrices
+Contents
+Run the Program!
+  use your own text files
+Assumptions
+Structure
+  cmd/main.go
+  calculate
+    SuitabilityScore
+    FinalResults
+    MakeMatrices
+  io
+    ParseFiles
+  matrices
+    MakeMatrices
 ```
 
 # Run the Program!
